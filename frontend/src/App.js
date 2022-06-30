@@ -1,7 +1,10 @@
-function App() {
-  return (
-    <h1>Hellow, Todo List!</h1>
-  );
+import { Component } from 'react';
+import TodoList from './components/TodoList';
+
+class App extends Component {
+  render() {
+    return <TodoList />;
+  }
 }
 
 export default App;
