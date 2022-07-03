@@ -3,8 +3,8 @@ import db from '.';
 
 class Task extends Model {
   public id?: number;
-
   public task: string = '';
+  public inProgress: boolean = false;
 }
 
 Task.init(
@@ -16,6 +16,7 @@ Task.init(
       type: DataTypes.INTEGER,
     },
     task: DataTypes.STRING,
+    inProgress: DataTypes.BOOLEAN
   },
   {
     modelName: 'task',

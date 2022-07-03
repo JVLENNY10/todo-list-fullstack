@@ -12,6 +12,9 @@ module.exports = {
       task: {
         type: Sequelize.STRING
       },
+      inProgress: {
+        type: Sequelize.BOOLEAN
+      }
     });
   },
   async down(queryInterface, _Sequelize) {
