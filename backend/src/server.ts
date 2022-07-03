@@ -1,7 +1,7 @@
-import express from 'express';
+import 'dotenv/config'; 
+import App from './App';
 
-const app = express();
+const app = new App();
+const PORT = Number(process.env.PORT);
 
-app.get('/', (_req, res) => res.json({ message: 'Hello, Todo List!' }));
-
-app.listen(3333);
+app.start(PORT);
