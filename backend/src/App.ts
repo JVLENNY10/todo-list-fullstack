@@ -1,15 +1,17 @@
 import express from 'express';
+import tasksRoutes from './routes/tasksRoutes';
 
 class App {
-  public app: express.Express;
+  private app: express.Express;
 
   constructor() {
-    this.config();
     this.app = express();
+    this.config();
   }
 
   private config():void {
     this.app.use(express.json());
+    this.app.use(tasksRoutes);
   }
 
   public start(PORT: string | number):void {
