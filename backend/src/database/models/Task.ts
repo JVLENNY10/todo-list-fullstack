@@ -3,8 +3,8 @@ import db from '.';
 
 class Task extends Model {
   public id?: number;
-  public task: string = '';
-  public inProgress: boolean = false;
+  public task!: string;
+  public inProgress!: boolean;
 }
 
 Task.init(
@@ -22,7 +22,6 @@ Task.init(
     modelName: 'task',
     sequelize: db,
     timestamps: false,
-    underscored: true,
   },
 );
 
