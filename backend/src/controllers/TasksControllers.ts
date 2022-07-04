@@ -8,9 +8,9 @@ class TasksControllers {
     this.tasksServices = new TasksServices();
   }
 
-  public testController = (_req: Request, res: Response) => {
-    const test = 'Hello, Todo List!';
-    return res.status(200).json({ message: test });
+  public findAll = async (_req: Request, res: Response) => {
+    const tasks = await this.tasksServices.findAll();
+    return res.status(200).json(tasks);
   };
 }
 
