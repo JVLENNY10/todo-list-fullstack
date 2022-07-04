@@ -6,8 +6,8 @@ const config: Options = {
   dialect: 'mysql',
   host: process.env.HOST,
   password: process.env.PASSWORD,
-  port: Number(process.env.PORT),
+  port: Number(process.env.DB_PORT),
   username: process.env.USER,
 };
 
-export default config;
+module.exports = config;
