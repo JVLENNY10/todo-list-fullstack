@@ -14,6 +14,11 @@ class TasksServices {
     const tasks = await Task.findAll({ attributes: { exclude: ['id'] } });
     return tasks;
   };
+
+  public update = async (id: string, updateTask: string) => {
+    const task = await Task.update({ task: updateTask }, { where: { id } });
+    return task;
+  }
 }
 
 export default TasksServices;
