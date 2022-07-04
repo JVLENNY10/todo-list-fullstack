@@ -6,6 +6,10 @@ class TasksServices {
     return task;
   }
 
+  public destroy = async (id: string) => {
+    await Task.destroy({ where: { id } });
+  }
+
   public findAll = async () => {
     const tasks = await Task.findAll({ attributes: { exclude: ['id'] } });
     return tasks;
