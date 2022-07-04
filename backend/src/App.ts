@@ -14,8 +14,8 @@ class App {
     this.app.use(tasksRoutes);
   }
 
-  public start(PORT: string | number):void {
-    this.app.listen(PORT);
+  public start(port: number):void {
+    this.app.listen(port);
   }
 }
 
