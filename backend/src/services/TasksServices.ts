@@ -12,7 +12,7 @@ class TasksServices {
 
   public findAll = async () => {
     const tasks = await Task.findAll({ attributes: { exclude: ['id'] } });
-    return tasks;
+    return tasks.sort();
   };
 
   public update = async (id: string, updateTask: string) => {
