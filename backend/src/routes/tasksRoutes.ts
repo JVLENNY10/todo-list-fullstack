@@ -4,8 +4,8 @@ import TasksControllers from '../controllers/TasksControllers';
 const routes = Router();
 const tasksControllers = new TasksControllers();
 
-const { testController } = tasksControllers;
+const { findAll } = tasksControllers;
 
-routes.get('/', testController);
+routes.get('/', findAll);
 
 export default routes;
