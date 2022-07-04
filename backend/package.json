@@ -4,6 +4,7 @@
   "description": "Back-End da aplicação Todo List Full Stack",
   "main": "./build/server",
   "scripts": {
+    "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "dev": "ts-node-dev --ignore-watch node_modules src/server.ts",
     "lint": "eslint",
     "start": "node /build/server.js"
