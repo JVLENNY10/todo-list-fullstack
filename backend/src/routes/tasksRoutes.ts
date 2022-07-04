@@ -4,8 +4,9 @@ import TasksControllers from '../controllers/TasksControllers';
 const routes = Router();
 const tasksControllers = new TasksControllers();
 
-const { findAll } = tasksControllers;
+const { create, findAll } = tasksControllers;
 
 routes.get('/', findAll);
+routes.post('/', create);
 
 export default routes;
