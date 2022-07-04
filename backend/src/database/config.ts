@@ -2,12 +2,12 @@ import { Options } from 'sequelize';
 import 'dotenv/config';
 
 const config: Options = {
-  database: 'TODO_LIST_FULLTACK',
+  database: process.env.DB_NAME,
   dialect: 'mysql',
-  host: process.env.HOST,
-  password: process.env.PASSWORD,
+  host: process.env.DB_HOST,
+  password: process.env.DB_PASSWORD,
   port: Number(process.env.DB_PORT),
-  username: process.env.USER,
+  username: process.env.DB_USER,
 };
 
 module.exports = config;
