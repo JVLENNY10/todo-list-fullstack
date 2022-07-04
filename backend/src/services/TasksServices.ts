@@ -1,7 +1,9 @@
+import Task from '../database/models/Task';
+
 class TasksServices {
-  public testService = () => {
-    const test = 'Hello, Todo List!';
-    return test;
+  public findAll = async () => {
+    const tasks = await Task.findAll({ attributes: { exclude: ['id'] } });
+    return tasks;
   };
 }
 
