@@ -4,7 +4,7 @@ import db from '.';
 class Task extends Model {
   public id?: number;
   public task!: string;
-  public inProgress!: boolean;
+  public inProgress!: string;
 }
 
 Task.init(
@@ -16,12 +16,12 @@ Task.init(
       type: DataTypes.INTEGER,
     },
     task: DataTypes.STRING,
-    inProgress: DataTypes.BOOLEAN
+    inProgress: DataTypes.STRING
   },
   {
     modelName: 'task',
     sequelize: db,
-    timestamps: false,
+    timestamps: true,
   },
 );
 

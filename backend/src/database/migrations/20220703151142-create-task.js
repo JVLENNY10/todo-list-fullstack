@@ -13,11 +13,11 @@ module.exports = {
         type: Sequelize.STRING
       },
       inProgress: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.STRING
       }
     });
   },
   async down(queryInterface, _Sequelize) {
-    await queryInterface.dropTable('Tasks');
+    await queryInterface.dropTable('tasks');
   }
 };
