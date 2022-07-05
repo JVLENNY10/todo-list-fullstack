@@ -15,9 +15,8 @@ class TasksServices {
     return tasks.sort();
   };
 
-  public update = async (id: string, updateTask: string) => {
-    const task = await Task.update({ task: updateTask }, { where: { id } });
-    return task;
+  public update = async (id: string, updateProgress: string) => {
+    await Task.update({ progress: updateProgress }, { where: { id } });
   }
 }
 
