@@ -1,3 +1,4 @@
+import api from '../Api';
 import Task from './Task';
 import { Component } from 'react';
 
@@ -14,8 +15,8 @@ class TodoList extends Component {
 
   async findAll() {
     try {
-      const response = await fetch('http://localhost:3333');
-      const tasks = await response.json();
+      const response = await api.get('/');
+      const tasks = response.data;
       this.setState({ tasks: tasks });
     } catch (error) {
       console.error(error);
