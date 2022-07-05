@@ -7,23 +7,23 @@ module.exports = {
       [
         {
           task: 'Treinar (Academia)',
-          inProgress: true
+          progress: 'pendente'
         },
         {
           task: 'Límpar a casa',
-          inProgress: true
+          progress: 'pendente'
         },
         {
           task: 'Levar o lixo para fora',
-          inProgress: false
+          progress: 'Em andamento'
         },
         {
           task: 'Lavar o carro',
-          inProgress: false
+          progress: 'Em andamento'
         },
         {
           task: 'Estudar',
-          inProgress: true
+          progress: 'pendente'
         },
       ], {});
   },
