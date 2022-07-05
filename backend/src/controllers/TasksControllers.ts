@@ -26,8 +26,8 @@ class TasksControllers {
   };
 
   public update = async (req: Request, res: Response) => {
-    const { id, updateTask } = req.body;
-    const task = await this.tasksServices.update(id, updateTask);
+    const { id, updateProgress } = req.body;
+    await this.tasksServices.update(id, updateProgress);
     return res.status(200).json({ message: 'Atualizado com sucesso!' });
   }
 }
