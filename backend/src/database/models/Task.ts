@@ -4,7 +4,7 @@ import db from '.';
 class Task extends Model {
   public id?: number;
   public task!: string;
-  public inProgress!: string;
+  public progress!: string;
 }
 
 Task.init(
@@ -16,7 +16,7 @@ Task.init(
       type: DataTypes.INTEGER,
     },
     task: DataTypes.STRING,
-    inProgress: DataTypes.STRING
+    progress: DataTypes.STRING
   },
   {
     modelName: 'task',

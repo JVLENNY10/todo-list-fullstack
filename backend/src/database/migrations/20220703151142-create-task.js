@@ -12,7 +12,7 @@ module.exports = {
       task: {
         type: Sequelize.STRING
       },
-      inProgress: {
+      progress: {
         type: Sequelize.STRING
       }
     });
