@@ -9,6 +9,6 @@ const { create, destroy, findAll, update } = tasksControllers;
 routes.get('/', findAll);
 routes.post('/', create);
 routes.delete('/:id', destroy);
-routes.put('/', update);
+routes.patch('/', update);
 
 export default routes;
