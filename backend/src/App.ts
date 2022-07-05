@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import tasksRoutes from './routes/tasksRoutes';
 
@@ -10,6 +11,7 @@ class App {
   }
 
   private config():void {
+    this.app.use(cors());
     this.app.use(express.json());
     this.app.use(tasksRoutes);
   }
